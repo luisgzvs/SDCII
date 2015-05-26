@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "SDC";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Page.Title.</h1>
+                <h2>Welcome to SDC  Company!</h2>
+            </hgroup>
+            <p>
+                We are a Software Development Company who provides diferrent services (Software Development, Outsourcing, Qualitty Assurance)
+                to supply all your needs in an easy way!
+            </p>
+        </div>
+    </section>
+}
+
+<h3>Information:</h3>
+
+<ol class="round">
+    <li class="">
+        <h5>Name</h5>
+        SDC: Software Development Company
+    </li>
+
+    <li class="">
+        <h5>Skills</h5>
+        .NET WEbsites, Ruby, HTML5, PHP, CSS, Java, C#
+    </li>
+
+    <li class="">
+        <h5>Location</h5>
+        San Carlos, Costa Rica.
+    </li>
+</ol>
+
+<script>
+$(function () {
+    $('.fadein img:gt(0)').hide();
+    setInterval(function () {
+        $('.fadein :first-child').fadeOut()
+           .next('img').fadeIn()
+           .end().appendTo('.fadein');
+    },
+      3000);
+});
+</script>
+
+<div class="fadein">
+    <img src="~/Images/1.png" style="width: 200px; height: 300px;" />
+    <img src="~/Images/2.png" style="width: 200px; height: 300px;" />
+    <img src="~/Images/3.png" style="width: 200px; height: 300px;" />
+    <img src="~/Images/5.png" style="width: 200px; height: 300px;" />
+    <img src="~/Images/6.png" style="width: 200px; height: 300px;" />
+</div>
